@@ -17,10 +17,10 @@ var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var special characters = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "|", "/", ":", ";", "<", ">", "," , "?", "."];
 
-var confirmlower = prompt ("Do you want to use lowercase letters in your password?");
-var confirmupper = prompt ("Do you want to use uppercase letters in your password?");
-var confirmnumbers = prompt ("Do you want to use numbers in your password?");
-var confirmspecial = prompt ("Do you want to use special characters in your password?");
+var confirmlower = confirm ("Do you want to use lowercase letters in your password?");
+var confirmupper = confirm ("Do you want to use uppercase letters in your password?");
+var confirmnumbers = confirm ("Do you want to use numbers in your password?");
+var confirmspecial = confirm ("Do you want to use special characters in your password?");
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
