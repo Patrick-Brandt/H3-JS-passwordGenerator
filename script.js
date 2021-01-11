@@ -1,3 +1,5 @@
+//This is just a test. Last time I commited, it was weird, so I completely started a new repo in github.
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
