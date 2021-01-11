@@ -7,7 +7,7 @@
 //When you select what password criteria to include, you're prompted for the length of password (8 to 128).
 
 //When prompted for character types, you can choose  lawercase, uppercase, numeric, and /or special characters.
-
+    // I think I need to add all lowercase, uppercase, numbers, and special characters as arrays?
 //when you answer each prompt, your input should be validated.
 
 //when all prompts are answered, a password is generated, THEN displayed in an alert or written on page.
