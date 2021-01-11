@@ -42,6 +42,7 @@ function generatePassword(){
   var confirmUpper = confirm ("Do you want to use uppercase letters in your password?");
   var confirmNumbers = confirm ("Do you want to use numbers in your password?");
   var confirmSpecial = confirm ("Do you want to use special characters in your password?");
+  var confirmLength = prompt ("How many characters do you want in your password? Please choose a number between 8 and 128.");
 }
 
 // Add event listener to generate button
