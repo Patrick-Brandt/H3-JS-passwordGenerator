@@ -47,10 +47,7 @@ function generatePassword(){
   var confirmNumbers = confirm ("Do you want to use numbers in your password?");
   var confirmSpecial = confirm ("Do you want to use special characters in your password?");
   var confirmLength = prompt ("How many characters do you want in your password? Please choose a number between 8 and 128.");
-  //The code below doesn't work.  
-  if (confirmlength < 8) {
-    prompt = "Password length must have a minimum of 8 characters.";
-  } 
+ 
 }
 
 // Add event listener to generate button
