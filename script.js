@@ -50,10 +50,16 @@ function generatePassword(){
   var confirmLower = confirm ("Do you want to use lowercase letters in your password?");
   if (confirmLower) {
     chosenCharacters += lowercase;
-    //I'm using a console.log to see if my code is actually working.
+    //I'm using a console.log for each confirm var to see if my code is actually storing the info in the chosenCharacters var.
     console.log (chosenCharacters)
   }
+
   var confirmUpper = confirm ("Do you want to use uppercase letters in your password?");
+  if (confirmUpper) {
+    chosenCharacters += uppercase;
+    //I'm using a console.log for each confirm var to see if my code is actually storing the info in the chosenCharacters var.
+    console.log (chosenCharacters)
+  }
   var confirmNumbers = confirm ("Do you want to use numbers in your password?");
   var confirmSpecial = confirm ("Do you want to use special characters in your password?");
   //If user does not choose any of the above characters, display this alert.
