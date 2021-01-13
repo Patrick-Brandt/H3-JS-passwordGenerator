@@ -69,21 +69,18 @@ function generatePassword(){
     console.log (chosenCharacters)
 }
 
-  //Come up with an if statement in case the user doesn't choose any characters.
-      //if (!confirmLower && !confirmUpper && !confirmNumbers && !confirmSpecial) {
-      //alert("You must choose at least one of the character options. Try again.");
-      //}
-      //return
-      //do i add 'else' here?
-
+  //If statement in case the user doesn't choose any characters.
+  if (!confirmLower && !confirmUpper && !confirmNumbers && !confirmSpecial) {
+  alert("You must choose at least one of the character options! Try again.");
+  } else {
   var confirmLength = prompt ("How many characters do you want in your password? Please choose a number between 8 and 128.");
   
   //If user selects a number that is less than the minimum or more than the maximum, this alert will diplay.
   if (confirmLength<passwordMin || confirmLength>passwordMax) {
-    alert("Password is not between 8 and 128 characters!");
+    alert("Password is not between 8 and 128 characters! Try again.");
   }
     return ""
-
+      }
 }
 
 
