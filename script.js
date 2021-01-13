@@ -32,9 +32,12 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  //Need to work on this code still. Everything else is working.
+  //passwordText.value = password;
+  //for (var i=0; i<passwordText.length; i++){
+//math.floor(mathrandom() * chosenCharacters.length)
+//}
 }
-
 //This is the function that contains the prompts that show up on screen.
 function generatePassword(){
   var confirmLower = confirm ("Do you want to use lowercase letters in your password?");
@@ -74,6 +77,7 @@ function generatePassword(){
   alert("You must choose at least one of the character options! Try again.");
   } else {
   var confirmLength = prompt ("How many characters do you want in your password? Please choose a number between 8 and 128.");
+  console.log (confirmLength)
   
   //If user selects a number that is less than the minimum or more than the maximum, this alert will diplay.
   if (confirmLength<passwordMin || confirmLength>passwordMax) {
@@ -82,7 +86,7 @@ function generatePassword(){
     return ""
       }
 }
-
+ 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
