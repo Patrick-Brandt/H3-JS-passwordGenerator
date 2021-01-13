@@ -60,8 +60,21 @@ function generatePassword(){
     //I'm using a console.log for each confirm var to see if my code is actually storing the info in the chosenCharacters var.
     console.log (chosenCharacters)
   }
+
   var confirmNumbers = confirm ("Do you want to use numbers in your password?");
+  if (confirmNumbers) {
+    chosenCharacters += numbers;
+    //I'm using a console.log for each confirm var to see if my code is actually storing the info in the chosenCharacters var.
+    console.log (chosenCharacters)
+}
+
   var confirmSpecial = confirm ("Do you want to use special characters in your password?");
+  if (confirmSpecial) {
+    chosenCharacters += specialCharacters;
+    //I'm using a console.log for each confirm var to see if my code is actually storing the info in the chosenCharacters var.
+    console.log (chosenCharacters)
+  }
+
   //If user does not choose any of the above characters, display this alert.
   var confirmLength = prompt ("How many characters do you want in your password? Please choose a number between 8 and 128.");
   
