@@ -1,7 +1,6 @@
 // This is my TO-DO LIST
     
 //when you answer each prompt, your input should be validated.
-  //Add a question for if they put in incorrect info.
 
 //I need to get the questions to actually return information, but don't remember how. 'Return.uppercase' or something like that?
 
@@ -49,11 +48,17 @@ function writePassword() {
 //This is the function that contains the prompts that show up on screen.
 function generatePassword(){
   var confirmLower = confirm ("Do you want to use lowercase letters in your password?");
+  if (confirmLower) {
+    chosenCharacters += lowercase;
+    //I'm using a console.log to see if my code is actually working.
+    console.log (chosenCharacters)
+  }
   var confirmUpper = confirm ("Do you want to use uppercase letters in your password?");
   var confirmNumbers = confirm ("Do you want to use numbers in your password?");
   var confirmSpecial = confirm ("Do you want to use special characters in your password?");
+  //If user does not choose any of the above characters, display this alert.
   var confirmLength = prompt ("How many characters do you want in your password? Please choose a number between 8 and 128.");
-
+  
   //If user selects a number that is less than the minimum or more than the maximum, this alert will diplay.
   if (confirmLength<passwordMin || confirmLength>passwordMax) {
     alert("Password is not between 8 and 128 characters!");
