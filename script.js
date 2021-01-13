@@ -1,16 +1,9 @@
 // This is my TO-DO LIST
-    
-//when you answer each prompt, your input should be validated.
-
-//I need to get the questions to actually return information, but don't remember how. 'Return.uppercase' or something like that?
 
 //when all prompts are answered, a password is generated, THEN displayed in an alert or written on page.
 
-//Will need to add if/else statements somewhere, but I'm not sure where.
-    //Conditional statement somewhere?
-
 //will need to use 'concat' somewhere once they have chosen character types. I think you create a new var,
-// and then combime the strings in it.
+// and then combine the strings in it.
     // ex: var combo = lowercase.concat(uppercase,numbers); Will look something like this.
 
 //Will need to find a randomizing function. 'Math.random' 'math.floor' or something like that?
@@ -25,8 +18,6 @@ var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacters = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "|", "/", ":", ";", "<", ">", "," , "?", "."];
 var chosenCharacters = [""];
-// Maybe I need add this, like in the rock,paper,scissors game? Example below
-    //var options= ["lowercase", "uppercase", "numbers", "specialCharacters"],
 
 //This is the minimum and maximum length that the user can choose for their password.
 var passwordMax = 128;
@@ -42,12 +33,12 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 //This is the function that contains the prompts that show up on screen.
 function generatePassword(){
   var confirmLower = confirm ("Do you want to use lowercase letters in your password?");
+  //The 'if' statements log the user's choice to the chosenCharacters var.
   if (confirmLower) {
     chosenCharacters += lowercase;
     //I'm using a console.log for each confirm var to see if my code is actually storing the info in the chosenCharacters var.
@@ -55,6 +46,7 @@ function generatePassword(){
   }
 
   var confirmUpper = confirm ("Do you want to use uppercase letters in your password?");
+  //The 'if' statements log the user's choice to the chosenCharacters var.
   if (confirmUpper) {
     chosenCharacters += uppercase;
     //I'm using a console.log for each confirm var to see if my code is actually storing the info in the chosenCharacters var.
@@ -62,6 +54,7 @@ function generatePassword(){
   }
 
   var confirmNumbers = confirm ("Do you want to use numbers in your password?");
+  //The 'if' statements log the user's choice to the chosenCharacters var.
   if (confirmNumbers) {
     chosenCharacters += numbers;
     //I'm using a console.log for each confirm var to see if my code is actually storing the info in the chosenCharacters var.
@@ -69,13 +62,20 @@ function generatePassword(){
 }
 
   var confirmSpecial = confirm ("Do you want to use special characters in your password?");
+  //The 'if' statements log the user's choice to the chosenCharacters var.
   if (confirmSpecial) {
     chosenCharacters += specialCharacters;
     //I'm using a console.log for each confirm var to see if my code is actually storing the info in the chosenCharacters var.
     console.log (chosenCharacters)
-  }
+}
 
-  //If user does not choose any of the above characters, display this alert.
+  //Come up with an if statement in case the user doesn't choose any characters.
+      //if (!confirmLower && !confirmUpper && !confirmNumbers && !confirmSpecial) {
+      //alert("You must choose at least one of the character options. Try again.");
+      //}
+      //return
+      //do i add 'else' here?
+
   var confirmLength = prompt ("How many characters do you want in your password? Please choose a number between 8 and 128.");
   
   //If user selects a number that is less than the minimum or more than the maximum, this alert will diplay.
