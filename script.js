@@ -32,12 +32,14 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+  passwordText.value = password;
+
   //Need to work on this code still. Everything else is working.
-  //passwordText.value = password;
-  //for (var i=0; i<passwordText.length; i++){
-//math.floor(mathrandom() * chosenCharacters.length)
-//}
+  //for (var i=0; i<confirmLength; i++){
+  //Math.floor(Math.random() * chosenCharacters.length)
+  //}
 }
+
 //This is the function that contains the prompts that show up on screen.
 function generatePassword(){
   var confirmLower = confirm ("Do you want to use lowercase letters in your password?");
