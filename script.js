@@ -17,16 +17,22 @@
 //Will need to find a randomizing function. 'Math.random' 'math.floor' or something like that?
     //generate a random password. Something like this. 
       // Get random index from array of options (this is from R,P,Scissors game)
-          //var index = Math.floor(Math.random() * options.length); 
+          //var index = Math.floor(Math.random() * options.length);
+          //try this:  math.floor(mathrandom() * chosenCharacters.length)] 
 
 //These arrays contain all of the characters that can possibly be used in the password.
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacters = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "|", "/", ":", ";", "<", ">", "," , "?", "."];
-var chosenCharacters = [" "];
+var chosenCharacters = [""];
 // Maybe I need add this, like in the rock,paper,scissors game? Example below
     //var options= ["lowercase", "uppercase", "numbers", "specialCharacters"],
+
+//This is the minimum and maximum length that the user can choose for their password.
+var passwordMax = 128;
+var passwordMin = 8;
+
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -47,8 +53,15 @@ function generatePassword(){
   var confirmNumbers = confirm ("Do you want to use numbers in your password?");
   var confirmSpecial = confirm ("Do you want to use special characters in your password?");
   var confirmLength = prompt ("How many characters do you want in your password? Please choose a number between 8 and 128.");
- 
+
+  //If user selects a number that is less than the minimum or more than the maximum, this alert will diplay.
+  if (confirmLength<passwordMin || confirmLength>passwordMax) {
+    alert("Password is not between 8 and 128 characters!");
+  }
+    return ""
+
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
