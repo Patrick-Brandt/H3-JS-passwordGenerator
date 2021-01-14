@@ -36,7 +36,6 @@ function writePassword() {
   passwordText.value = password; 
 }    
 
-
 //This is the function that contains the prompts that show up on screen.
 function generatePassword(){
   var confirmLower = confirm ("Do you want to use lowercase letters in your password?");
@@ -82,17 +81,15 @@ function generatePassword(){
   if (confirmLength<passwordMin || confirmLength>passwordMax) {
     alert("Password is not between 8 and 128 characters! Try again.");
 } else {
-  return "This is a test"//So I know this is working because it is displaying in the poassword generator. I don't know what to return.
- }   
-  
+  //This is where I need to write the code to that calculates the password and then returns that variable that contains the password.
+  for (var i=0; i<confirmLength; i++){
+    Math.floor(Math.random() * chosenCharacters.length);
+    passwordText.value += chosenCharacters[total];
 }
+}    
+} 
+}     
 
-}
-//Need to work on this code still. Everything else is working.
-  //for (var i=0; i<confirmLength; i++){
-  //var total= Math.floor(Math.random() * chosenCharacters.length);
-     //passwordText.value += total;  
-//}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
