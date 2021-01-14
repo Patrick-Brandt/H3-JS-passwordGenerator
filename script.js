@@ -19,7 +19,9 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacters = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "|", "/", ":", ";", "<", ">", "," , "?", "."];
 var chosenCharacters = [""];
 var confirmLength = [""];
-
+var generatedPassword = [""]
+var passwordText = [""]
+var password = [""]
 //This is the minimum and maximum length that the user can choose for their password.
 var passwordMax = 128;
 var passwordMin = 8;
@@ -86,10 +88,10 @@ function generatePassword(){
     Math.floor(Math.random() * chosenCharacters.length);
     passwordText.value += chosenCharacters[total];
 }
-}    
+return generatedPassword; 
 } 
 }     
-
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
