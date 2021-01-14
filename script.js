@@ -18,6 +18,7 @@ var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacters = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "|", "/", ":", ";", "<", ">", "," , "?", "."];
 var chosenCharacters = [""];
+var confirmLength = [""];
 
 //This is the minimum and maximum length that the user can choose for their password.
 var passwordMax = 128;
@@ -36,9 +37,11 @@ function writePassword() {
 
   //Need to work on this code still. Everything else is working.
   //for (var i=0; i<confirmLength; i++){
-  //Math.floor(Math.random() * chosenCharacters.length)
-  //}
-}
+  //var total= Math.floor(Math.random() * chosenCharacters.length);
+     //passwordText.value += total;  
+//} 
+}    
+
 
 //This is the function that contains the prompts that show up on screen.
 function generatePassword(){
@@ -85,10 +88,10 @@ function generatePassword(){
   if (confirmLength<passwordMin || confirmLength>passwordMax) {
     alert("Password is not between 8 and 128 characters! Try again.");
   }
-    return ""
+ //Is this returning an empty string? address this.
       }
 }
- 
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
