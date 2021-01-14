@@ -33,13 +33,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-
-  //Need to work on this code still. Everything else is working.
-  //for (var i=0; i<confirmLength; i++){
-  //var total= Math.floor(Math.random() * chosenCharacters.length);
-     //passwordText.value += total;  
-//} 
+  passwordText.value = password; 
 }    
 
 
@@ -87,11 +81,18 @@ function generatePassword(){
   //If user selects a number that is less than the minimum or more than the maximum, this alert will diplay.
   if (confirmLength<passwordMin || confirmLength>passwordMax) {
     alert("Password is not between 8 and 128 characters! Try again.");
-  }
- //Is this returning an empty string? address this.
-      }
+} else {
+  return "This is a test"//So I know this is working because it is displaying in the poassword generator. I don't know what to return.
+ }   
+  
 }
 
+}
+//Need to work on this code still. Everything else is working.
+  //for (var i=0; i<confirmLength; i++){
+  //var total= Math.floor(Math.random() * chosenCharacters.length);
+     //passwordText.value += total;  
+//}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
