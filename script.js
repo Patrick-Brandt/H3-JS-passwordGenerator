@@ -70,7 +70,7 @@ function generatePassword(){
     if (confirmLength<passwordMin || confirmLength>passwordMax) {
       alert("Password is not between 8 and 128 characters! Try again.");
     } else {
-      //This is where I need to write the code to that calculates the password and then returns that variable that contains the password.
+      //This is the code that calculates the password and then returns that variable that contains the password.
       for (var i=0; i<confirmLength; i++){
         var randomIndex = Math.floor(Math.random() * chosenCharacters.length);
         password += chosenCharacters[randomIndex];
