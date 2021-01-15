@@ -93,5 +93,13 @@ return generatedPassword;
 }     
 }
 
+//for (var i = 0; i < confirmLength; i++) {
+//  var randomCharSelected = chosenCharacters[Math.floor(Math.random() * chosenCharacters.length)];
+//  console.log(`current loop index is ${i}, pushing random character ${randomCharSelected}`)
+//  passwordText.push(randomCharSelected)
+//}
+//console.log("Finished Array Below this log")
+//console.log(passwordText)
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
