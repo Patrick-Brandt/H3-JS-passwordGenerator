@@ -1,9 +1,3 @@
-// This is my TO-DO LIST
-
-//will need to use 'concat' somewhere once they have chosen character types. I think you create a new var,
-// and then combine the strings in it.
-    // ex: var combo = lowercase.concat(uppercase,numbers); Will look something like this.
-
 //These arrays contain all of the characters that can possibly be used in the password.
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -19,7 +13,7 @@ var generatedPassword = [];
 var passwordText = [];
 var password = "";
 
-// Lines 22 to 31 were provided to us for the assignment.
+// Lines 16 to 28 were provided to us for the assignment.
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
