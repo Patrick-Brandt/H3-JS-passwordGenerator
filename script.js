@@ -1,33 +1,25 @@
 // This is my TO-DO LIST
 
-//when all prompts are answered, a password is generated, THEN displayed in an alert or written on page.
-
 //will need to use 'concat' somewhere once they have chosen character types. I think you create a new var,
 // and then combine the strings in it.
     // ex: var combo = lowercase.concat(uppercase,numbers); Will look something like this.
-
-//Will need to find a randomizing function. 'Math.random' 'math.floor' or something like that?
-    //generate a random password. Something like this. 
-      // Get random index from array of options (this is from R,P,Scissors game)
-          //var index = Math.floor(Math.random() * options.length);
-          //try this:  math.floor(mathrandom() * chosenCharacters.length)] 
 
 //These arrays contain all of the characters that can possibly be used in the password.
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specialCharacters = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "|", "/", ":", ";", "<", ">", "," , "?", "."];
+var specialCharacters = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "|", "/", ":", "<", ">", "?", "."];
+//The var below houses all of the character choices that the user makes.
 var chosenCharacters = [];
+//The two vars directly below are the minimum and maximum length that the user can choose for their password.
+var passwordMax = 128;
+var passwordMin = 8;
 var confirmLength = [];
 var generatedPassword = [];
 var passwordText = [];
 var password = "";
-//This is the minimum and maximum length that the user can choose for their password.
-var passwordMax = 128;
-var passwordMin = 8;
 
-
-// Assignment Code
+// Lines 22 to 31 were provided to us for the assignment.
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -92,17 +84,8 @@ function generatePassword(){
       console.log(password) 
       return password
     } 
-    
   }     
 }
-
-//for (var i = 0; i < confirmLength; i++) {
-//  var randomCharSelected = chosenCharacters[Math.floor(Math.random() * chosenCharacters.length)];
-//  console.log(`current loop index is ${i}, pushing random character ${randomCharSelected}`)
-//  passwordText.push(randomCharSelected)
-//}
-//console.log("Finished Array Below this log")
-//console.log(passwordText)
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
